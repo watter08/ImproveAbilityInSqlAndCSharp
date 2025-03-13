@@ -1,5 +1,5 @@
 ﻿using ImproveAbilityInSqlAndC_.Application.Interfaces.Patterns;
-using ImproveAbilityInSqlAndC_.Domain.Consts.Product;
+using ImproveAbilityInSqlAndC_.Domain.Consts.Queries.Product;
 
 namespace ImproveAbilityInSqlAndC_.Infrastructure.Patterns
 {
