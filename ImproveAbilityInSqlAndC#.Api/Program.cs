@@ -1,8 +1,10 @@
+using ImproveAbilityInSqlAndC_.Application.Extensions;
 using ImproveAbilityInSqlAndC_.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddApplicationMapings();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 

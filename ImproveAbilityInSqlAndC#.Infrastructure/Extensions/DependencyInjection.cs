@@ -1,6 +1,10 @@
 ﻿using ImproveAbilityInSqlAndC_.Application.Interfaces.Patterns;
+using ImproveAbilityInSqlAndC_.Application.Interfaces.Repositories;
+using ImproveAbilityInSqlAndC_.Application.Interfaces.Services;
 using ImproveAbilityInSqlAndC_.Infrastructure.Context;
 using ImproveAbilityInSqlAndC_.Infrastructure.Patterns;
+using ImproveAbilityInSqlAndC_.Infrastructure.Repositories.Product;
+using ImproveAbilityInSqlAndC_.Infrastructure.Services.Product;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,11 +21,13 @@ namespace ImproveAbilityInSqlAndC_.Infrastructure.Extensions
             });
 
             services.AddSingleton<IQueryFactory, QueryFactory>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             return services;
         }
 
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
+            services.AddScoped<IProductServices, ProductServices>();
             return services;
         }
     }
