@@ -2,8 +2,8 @@
 
 namespace ImproveAbilityInSqlAndC_.Application.Interfaces.Repositories
 {
-    public interface IProductRepository
+    public interface IGenericRepository
     {
-        Task<DataTable> GetExpensiveProductByCategory(string query);
+        Task<DataTable> ExecuteQueryAsync(string query);
     }
 }

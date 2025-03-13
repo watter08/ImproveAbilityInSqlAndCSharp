@@ -20,5 +20,12 @@ namespace ImproveAbilityInSqlAndC_.Api.Controllers
             ApiResponse<List<DtoProducts>> response = await _services.GetMoreExpensiveProductByCategory();
             return Ok(response);
         }
+
+        [HttpGet("GetMoreExpensiveProductByCategoryAndPosition/{position}")]
+        public async Task<IActionResult> GetMoreExpensiveProductByCategoryAndPosition(int position)
+        {
+            ApiResponse<List<DtoProducts>> response = await _services.GetMoreExpensiveProductByCategoryAndPosition(position);
+            return Ok(response);
+        }
     }
 }
