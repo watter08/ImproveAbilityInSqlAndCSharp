@@ -1,5 +1,5 @@
 ﻿using ImproveAbilityInSqlAndC_.Application.Interfaces.Patterns;
-using ImproveAbilityInSqlAndC_.Domain.Consts.Product;
+using ImproveAbilityInSqlAndC_.Domain.Consts.Queries.Product;
 
 namespace ImproveAbilityInSqlAndC_.Infrastructure.Patterns
 {
@@ -11,7 +11,8 @@ namespace ImproveAbilityInSqlAndC_.Infrastructure.Patterns
         {
             _queries = new Dictionary<string, string>
             {
-                {"maxExpensiveProductByCategory", ProductQueries.getMoreExpensiveProductByCategory }
+                {"maxExpensiveProductByCategory", ProductQueries.getMoreExpensiveProductByCategory },
+                {"maxExpensiveProductByCategoryAndPosition", ProductQueries.getMoreExpensiveProductByCategoryAndPosition }
             };
         }
 

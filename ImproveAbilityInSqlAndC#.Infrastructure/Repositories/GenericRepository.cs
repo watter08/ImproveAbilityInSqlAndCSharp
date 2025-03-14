@@ -2,17 +2,16 @@
 using ImproveAbilityInSqlAndC_.Infrastructure.Context;
 using System.Data;
 
-namespace ImproveAbilityInSqlAndC_.Infrastructure.Repositories.Product
+namespace ImproveAbilityInSqlAndC_.Infrastructure.Repositories
 {
-    public class ProductRepository: IProductRepository
+    public class GenericRepository: IGenericRepository
     {
         private readonly AdoNetContext _context;
-        public ProductRepository(AdoNetContext context)
+        public GenericRepository(AdoNetContext context)
         {
             _context = context;
         }
-
-        public async Task<DataTable> GetExpensiveProductByCategory(string query)
+        public async Task<DataTable> ExecuteQueryAsync(string query)
         {
             return await _context.ExecuteQueryAsync(query);
         }
