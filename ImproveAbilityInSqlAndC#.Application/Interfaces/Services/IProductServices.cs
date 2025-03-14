@@ -6,5 +6,6 @@ namespace ImproveAbilityInSqlAndC_.Application.Interfaces.Services
     {
         Task<ApiResponse<List<DtoProducts>>> GetMoreExpensiveProductByCategory();
         Task<ApiResponse<List<DtoProducts>>> GetMoreExpensiveProductByCategoryAndPosition(int position);
+        Task<ApiResponse<List<DtoProducts>>> GetMiddleProductPriceByMonth();
     }
 }

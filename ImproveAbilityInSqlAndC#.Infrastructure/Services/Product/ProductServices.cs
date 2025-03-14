@@ -31,6 +31,13 @@ namespace ImproveAbilityInSqlAndC_.Infrastructure.Services.Product
             return response;
         }
 
+        public async Task<ApiResponse<List<DtoProducts>>> GetMiddleProductPriceByMonth()
+        {
+            string query = _queryFactory.GetQuery("middleProductPriceByMonth");
+            ApiResponse<List<DtoProducts>>? response = await ExecuteProductQUERY(query);
+            return response;
+        }
+
         private async Task<ApiResponse<List<DtoProducts>>> ExecuteProductQUERY(string query)
         {
             ApiResponse<List<DtoProducts>>? response = default;

@@ -14,10 +14,17 @@ namespace ImproveAbilityInSqlAndC_.Api.Controllers
             _services = productServices;
         }
 
-        [HttpGet(Name = "GetMaxExpensiveProductByCategory")]
+        [HttpGet("GetMaxExpensiveProductByCategory")]
         public async Task<IActionResult> GetMaxExpensiveProductByCategory()
         {
             ApiResponse<List<DtoProducts>> response = await _services.GetMoreExpensiveProductByCategory();
+            return Ok(response);
+        }
+
+        [HttpGet("GetMiddleProductPriceByMonth")]
+        public async Task<IActionResult> GetMiddleProductPriceByMonth()
+        {
+            ApiResponse<List<DtoProducts>> response = await _services.GetMiddleProductPriceByMonth();
             return Ok(response);
         }
 

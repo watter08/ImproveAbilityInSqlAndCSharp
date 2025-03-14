@@ -12,7 +12,8 @@ namespace ImproveAbilityInSqlAndC_.Infrastructure.Patterns
             _queries = new Dictionary<string, string>
             {
                 {"maxExpensiveProductByCategory", ProductQueries.getMoreExpensiveProductByCategory },
-                {"maxExpensiveProductByCategoryAndPosition", ProductQueries.getMoreExpensiveProductByCategoryAndPosition }
+                {"maxExpensiveProductByCategoryAndPosition", ProductQueries.getMoreExpensiveProductByCategoryAndPosition },
+                {"middleProductPriceByMonth", ProductQueries.getMiddleProductPriceByMonth }
             };
         }
 
